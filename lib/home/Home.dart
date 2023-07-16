@@ -2,6 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+import 'package:virality_new/activityFeed/ActivityFeedPage.dart';
+import 'package:virality_new/searchPage/SearchPage.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState(email: '');
@@ -81,9 +84,13 @@ class _HomePageState extends State<HomePage> {
           body: Stack(
             children: [
               PageView(
-                children: [
-                  // Ticket(),
-                  // CustomDuty(),
+                controller: _pageController,
+                onPageChanged: onPageChange,
+                physics: const NeverScrollableScrollPhysics(),
+                dragStartBehavior: DragStartBehavior.start,
+                children: const [
+                  ActivityFeedPage(),
+                  SearchPage(),
                   // ChatHome(
                   //   logInUser: email,
                   // ),
@@ -92,10 +99,6 @@ class _HomePageState extends State<HomePage> {
                   //   logInUser: email,
                   // ),
                 ],
-                controller: _pageController,
-                onPageChanged: onPageChange,
-                physics: const NeverScrollableScrollPhysics(),
-                dragStartBehavior: DragStartBehavior.start,
               ),
               // Positioned(
               //     //left: 100.0,
