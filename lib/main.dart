@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       theme: ThemeData(
           primaryColor: const Color(0xffd5e4e1),
           colorScheme: const ColorScheme.light()),
-      home: const ActivityFeedPage(),
+      home: HomePage(),
     );
   }
 }
