@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:virality_new/activityFeed/ActivityFeedPage.dart';
 import 'package:virality_new/home/Home.dart';
 // import 'package:virality/login/ui/login_page.dart';
 import 'package:virality_new/login/ui/login_page.dart';
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       theme: ThemeData(
           primaryColor: const Color(0xffd5e4e1),
           colorScheme: const ColorScheme.light()),
-      home: HomePage(),
+      home: const ActivityFeedPage(),
     );
   }
 }
