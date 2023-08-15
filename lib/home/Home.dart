@@ -4,6 +4,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import 'package:virality_new/activityFeed/ActivityFeedPage.dart';
 import 'package:virality_new/searchPage/SearchPage.dart';
+import 'package:virality_new/profile/ProfileHome.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -91,13 +92,9 @@ class _HomePageState extends State<HomePage> {
                 children: const [
                   ActivityFeedPage(),
                   SearchPage(),
-                  // ChatHome(
-                  //   logInUser: email,
-                  // ),
-                  // CarService(),
-                  // QrHome(
-                  //   logInUser: email,
-                  // ),
+                  SearchPage(),
+                  SearchPage(),
+                  ProfileHome(),
                 ],
               ),
               // Positioned(
