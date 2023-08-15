@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import 'package:virality_new/activityFeed/ActivityFeedPage.dart';
+import 'package:virality_new/leaderboard/leaderboard.dart';
 import 'package:virality_new/searchPage/SearchPage.dart';
 
 class HomePage extends StatefulWidget {
@@ -88,9 +89,10 @@ class _HomePageState extends State<HomePage> {
                 onPageChanged: onPageChange,
                 physics: const NeverScrollableScrollPhysics(),
                 dragStartBehavior: DragStartBehavior.start,
-                children: const [
+                children: [
                   ActivityFeedPage(),
                   SearchPage(),
+                  Leaderboard()
                   // ChatHome(
                   //   logInUser: email,
                   // ),
