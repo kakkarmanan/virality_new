@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:virality_new/utilities/header.dart';
 import 'package:virality_new/activityFeed/widgets/post.dart';
 import 'package:virality_new/activityFeed/widgets/stories.dart';
 
@@ -15,13 +15,7 @@ class _ActivityFeedPageState extends State<ActivityFeedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text(
-          "Virality",
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
+      appBar: buildAppBar(context),
       body: ListView(
         children: const [
           Stories(),

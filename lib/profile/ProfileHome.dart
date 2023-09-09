@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:virality_new/activityFeed/widgets/stories.dart';
 import 'package:virality_new/profile/portfolio/PortfolioPage.dart';
 
 class ProfileHome extends StatefulWidget {
@@ -10,7 +10,6 @@ class ProfileHome extends StatefulWidget {
 }
 
 class _ProfileHomeState extends State<ProfileHome> {
-  @override
   Column buildCountColumn(String label, int count) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -203,6 +202,19 @@ class _ProfileHomeState extends State<ProfileHome> {
               'Bio',
             ),
           ),
+          Container(
+            //bio
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.only(top: 2.0),
+            child: Text(
+              'Story highlights',
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+          Stories()
         ],
       ),
     );

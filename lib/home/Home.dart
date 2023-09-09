@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
               ),
               Icon(
-                Icons.add_circle_outline_rounded,
+                Icons.leaderboard_rounded,
                 size: 30,
                 color: Colors.white,
               ),
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
             ],
             color: Colors.black,
             buttonBackgroundColor: Colors.black,
-            backgroundColor: const Color(0xffd5e4e1),
+            backgroundColor: Colors.white,
             animationCurve: Curves.easeInOut,
             animationDuration: const Duration(milliseconds: 600),
             onTap: onTap,

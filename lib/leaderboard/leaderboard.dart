@@ -59,7 +59,7 @@ class _LeaderboardState extends State<Leaderboard> {
               ),
               const Expanded(
                 child:
-                    TabBarView(children: [MyTabOne(), MyTabTwo(), MyTabTwo()]),
+                    TabBarView(children: [MyTabOne(), MyTabOne(), MyTabOne()]),
               )
             ],
           ),

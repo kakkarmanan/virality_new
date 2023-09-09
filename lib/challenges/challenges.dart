@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:virality_new/utilities/header.dart';
 
-class SearchPage extends StatefulWidget {
-  const SearchPage({Key? key}) : super(key: key);
+class challenges extends StatefulWidget {
+  const challenges({super.key});
 
   @override
-  _SearchPageState createState() => _SearchPageState();
+  State<challenges> createState() => _challengesState();
 }
 
-class _SearchPageState extends State<SearchPage> {
+class _challengesState extends State<challenges> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
       body: Center(
         child: Container(
-          child: Text('Search page'),
+          child: Text('Challenges page'),
         ),
       ),
     );
+    ;
   }
 }
