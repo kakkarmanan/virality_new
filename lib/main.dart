@@ -3,6 +3,7 @@ import 'package:virality_new/activityFeed/ActivityFeedPage.dart';
 import 'package:virality_new/home/Home.dart';
 // import 'package:virality/login/ui/login_page.dart';
 import 'package:virality_new/login/ui/login_page.dart';
+import 'package:virality_new/welcome/WelcomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,9 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
       title: "Virality",
       theme: ThemeData(
-          primaryColor: const Color(0xffd5e4e1),
+          primaryColor: const Color(0xfffcfcfc),
           colorScheme: const ColorScheme.light()),
-      home: HomePage(),
+      // home: HomePage(),
+      // home: LoginPage(),
+      home: const WelcomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
