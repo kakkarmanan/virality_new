@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:virality_new/login/ui/signup.dart';
 import 'package:virality_new/home/Home.dart';
+import 'package:localstorage/localstorage.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -16,6 +17,26 @@ class _LoginPageState extends State<LoginPage> {
   final String _email = 'abc@xtz.com';
   final String _password = '1234';
   bool _obscureText = true;
+  final LocalStorage storage = LocalStorage('virality');
+
+  @override
+  void initState() {
+    super.initState();
+    awaitReady();
+  }
+
+  Future<void> awaitReady() async {
+    await storage.ready;
+    print(storage.getItem('user'));
+    if (storage.getItem('user') != null) {
+      await Future.delayed(const Duration(seconds: 1));
+
+      if (context.mounted) {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => HomePage()));
+      }
+    }
+  }
 
   @override
   void dispose() {
